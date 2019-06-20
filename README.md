@@ -71,9 +71,7 @@ const Root = () => {
 ReactDOM.render(<App />, document.getElementById('root'));
 ```
 
-4. 
-
-You also get `params`, `queryParams`, `routeId`, `path` in the router object.
+4. You also get `params`, `queryParams`, `routeId`, `path` in the router object.
 
 ```
 const Gallery = () => {
