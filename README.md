@@ -8,7 +8,7 @@ Based on [mobx-router](https://github.com/kitze/mobx-router) and [rttr](https://
 
 1. Write the routes object. 
 
-```
+```js
 const routes = {
   home: {
     id: 'home',
@@ -26,7 +26,7 @@ const routes = {
 ```
 
 2. Wrap your app with the Router component
-```
+```js
 <Router routes={routes}>
     <App />
 </Router>
@@ -39,7 +39,7 @@ const routes = {
 - Use the `isRoute` function for checking if a route is currently active
 
 
-```
+```js
 const Root = () => {
   const {goTo, isRoute} = useRouter();
 
@@ -71,7 +71,7 @@ const Root = () => {
 
 4. You also get `params`, `queryParams`, `routeId`, `path` in the router object.
 
-```
+```js
 const Gallery = () => {
   const { params } = useRouter();
   return <div>Browsing picture {params.imageId}</div>;
