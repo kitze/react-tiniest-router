@@ -67,8 +67,6 @@ const Root = () => {
     </div>
   );
 };
-
-ReactDOM.render(<App />, document.getElementById('root'));
 ```
 
 4. You also get `params`, `queryParams`, `routeId`, `path` in the router object.
