@@ -1,4 +1,4 @@
-## react-simple-router
+## react-tiniest-router
 
 For the times when you *really* need a simple router.  
 Based on [mobx-router](https://github.com/kitze/mobx-router) and [rttr](https://github.com/kitze/rttr).
