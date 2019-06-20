@@ -1,4 +1,4 @@
-## react-tiniest-router
+## 🐁 react-tiniest-router
 
 For the times when you *really* need a simple router.  
 Based on [mobx-router](https://github.com/kitze/mobx-router) and [rttr](https://github.com/kitze/rttr).
@@ -108,7 +108,7 @@ Please stop doing stupid stuff with your router.
 Please stop doing stupid stuff with your router.
 
 - I'm offended by this FAQ section, where can I complain?  
-Yell @ me on [twitter.com/thekitze](https://twitter.com/thekitze)
+Yell @ me on [Twitter](https://twitter.com/thekitze)
 
 ### 🙋‍♂️ Made by [@thekitze](https://twitter.com/thekitze)  
 - 🏫 [React Academy](https://reactacademy.io) - Interactive React and GraphQL workshops
