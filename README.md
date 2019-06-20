@@ -3,9 +3,10 @@
 For the times when you *really* need a simple router.  
 Based on [mobx-router](https://github.com/kitze/mobx-router) and [rttr](https://github.com/kitze/rttr).
 
+
 ## Usage
 
-1. Write the routes object
+1. Write the routes object. 
 
 ```
 const routes = {
@@ -26,11 +27,9 @@ const routes = {
 
 2. Wrap your app with the Router component
 ```
-const App = () => (
-  <Router routes={routes}>
-    <Root />
-  </Router>
-);
+<Router routes={routes}>
+    <App />
+</Router>
 ```
 
 
@@ -114,3 +113,9 @@ Please stop doing stupid stuff with your router.
 
 - I'm offended by this FAQ section, where can I complain?  
 Yell @ me on [twitter.com/thekitze](https://twitter.com/thekitze)
+
+### 🙋‍♂️ Made by [@thekitze](https://twitter.com/thekitze)  
+- 🏫 [React Academy](https://reactacademy.io) - Interactive React and GraphQL workshops
+- 💌 [Twizzy](https://twizzy.app) - A standalone app for Twitter DM
+- 🤖 [JSUI](https://github.com/kitze/JSUI) - A powerful UI toolkit for managing JavaScript apps
+- 📹 [Vlog](https://youtube.com/kitze) - Watch my sad developer life

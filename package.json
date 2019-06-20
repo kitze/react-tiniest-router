@@ -1,8 +1,8 @@
 {
-  "name": "react-simple-router",
+  "name": "react-tiniest-router",
   "version": "0.1.0",
   "main": "dist/index.js",
-  "module": "dist/react-simple-router.esm.js",
+  "module": "dist/react-tiniest-router.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist"
