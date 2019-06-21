@@ -1,4 +1,4 @@
-## react-simple-router
+## 🐁 react-tiniest-router
 
 For the times when you *really* need a simple router.  
 Based on [mobx-router](https://github.com/kitze/mobx-router) and [rttr](https://github.com/kitze/rttr).
@@ -8,7 +8,7 @@ Based on [mobx-router](https://github.com/kitze/mobx-router) and [rttr](https://
 
 1. Write the routes object. 
 
-```
+```js
 const routes = {
   home: {
     id: 'home',
@@ -26,7 +26,7 @@ const routes = {
 ```
 
 2. Wrap your app with the Router component
-```
+```js
 <Router routes={routes}>
     <App />
 </Router>
@@ -39,7 +39,7 @@ const routes = {
 - Use the `isRoute` function for checking if a route is currently active
 
 
-```
+```js
 const Root = () => {
   const {goTo, isRoute} = useRouter();
 
@@ -67,13 +67,11 @@ const Root = () => {
     </div>
   );
 };
-
-ReactDOM.render(<App />, document.getElementById('root'));
 ```
 
 4. You also get `params`, `queryParams`, `routeId`, `path` in the router object.
 
-```
+```js
 const Gallery = () => {
   const { params } = useRouter();
   return <div>Browsing picture {params.imageId}</div>;
@@ -110,7 +108,7 @@ Please stop doing stupid stuff with your router.
 Please stop doing stupid stuff with your router.
 
 - I'm offended by this FAQ section, where can I complain?  
-Yell @ me on [twitter.com/thekitze](https://twitter.com/thekitze)
+Yell @ me on [Twitter](https://twitter.com/thekitze)
 
 ### 🙋‍♂️ Made by [@thekitze](https://twitter.com/thekitze)  
 - 🏫 [React Academy](https://reactacademy.io) - Interactive React and GraphQL workshops
