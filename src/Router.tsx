@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { replaceUrlParams, createRouter } from './utils';
 import { mapObject } from './utils';
 import { RouterContext } from './router-context';
-import { RouterStateType, RouteType, RoutesType } from 'types';
+import { RouterStateType, RouteType, RoutesType } from './types';
 
 export const Router: React.FC<{ routes: RoutesType }> = ({
   children,
