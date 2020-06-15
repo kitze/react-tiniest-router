@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { replaceUrlParams, createRouter } from './utils';
+import { replaceUrlParams, createRouter, RouterHandler } from './utils';
 import { mapObject } from './utils';
 import { RouterContext } from './router-context';
 import { RouterStateType, RouteType, RoutesType } from './types';
@@ -17,7 +17,7 @@ export const Router: React.FC<{ routes: RoutesType }> = ({
     options: {},
   });
 
-  const router = useRef<any>(null);
+  const router = useRef<RouterHandler | null>(null);
 
   const currentUrl: string = replaceUrlParams(
     state.path,
@@ -39,12 +39,15 @@ export const Router: React.FC<{ routes: RoutesType }> = ({
     );
 
     //initial location
-    router.current(window.location.pathname);
+    router.current(window.location.pathname, window.location.search.substr(1));
 
     //on change route
     window.onpopstate = ev => {
       if (ev.type === 'popstate') {
-        router.current(window.location.pathname);
+        router.current(
+          window.location.pathname,
+          window.location.search.substr(1)
+        );
       }
     };
   }, []);
