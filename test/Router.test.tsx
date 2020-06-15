@@ -2,6 +2,7 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { Router } from '../src/index';
 import { routes, Root } from './mocks';
+import { act } from 'react-dom/test-utils';
 
 describe('Router tests', () => {
   it('should render a Router on the home page', () => {
@@ -46,7 +47,7 @@ describe('Router tests', () => {
     expect(screen.getByText('About us')).toBeDefined();
   });
 
-  it('should navigateto the Picture Gallery', () => {
+  it('should navigate to the Picture Gallery using params', () => {
     // arrange
     render(
       <Router routes={routes}>
@@ -59,5 +60,34 @@ describe('Router tests', () => {
 
     // assert
     expect(screen.getByText('Browsing picture 2')).toBeDefined();
+  });
+
+  it('should navigate to the Picture Gallery using query params', () => {
+    // arrange
+    render(
+      <Router routes={routes}>
+        <Root />
+      </Router>
+    );
+
+    // act
+    fireEvent.click(screen.getByText('go to picture 1'));
+
+    // assert
+    expect(screen.getByText('Browsing picture 1')).toBeDefined();
+
+    fireEvent.click(screen.getByText('go to about'));
+    expect(() => screen.getByText('Browsing picture 1')).toThrow();
+
+    // Simulate "window.location.back()"
+    delete global.window.location;
+    global.window = Object.create(window);
+    global.window.location = {
+      search: '?imageId=1',
+      pathname: '/gallery2',
+    } as Location;
+    act(() => window.onpopstate({ type: 'popstate' } as PopStateEvent));
+
+    expect(screen.getByText('Browsing picture 1')).toBeDefined();
   });
 });

@@ -15,11 +15,20 @@ export const routes = {
     id: 'gallery',
     path: '/gallery/:imageId',
   },
+  gallery2: {
+    id: 'gallery2',
+    path: '/gallery2',
+  },
 };
 
 export const Gallery = () => {
   const { params } = useRouter();
   return <div>Browsing picture {params.imageId}</div>;
+};
+
+export const Gallery2 = () => {
+  const { queryParams } = useRouter();
+  return <div>Browsing picture {queryParams.imageId}</div>;
 };
 
 export const Root = () => {
@@ -30,14 +39,11 @@ export const Root = () => {
       <div>
         <button onClick={() => goTo(routes.home)}>go home</button>
         <button onClick={() => goTo(routes.about)}>go to about</button>
-        <button onClick={() => goTo(routes.gallery, { imageId: 1 })}>
+        <button onClick={() => goTo(routes.gallery2, {}, { imageId: 1 })}>
           go to picture 1
         </button>
         <button onClick={() => goTo(routes.gallery, { imageId: 2 })}>
           go to picture 2
-        </button>
-        <button onClick={() => goTo(routes.gallery, { imageId: 3 })}>
-          go to picture 3
         </button>
       </div>
 
@@ -46,6 +52,8 @@ export const Root = () => {
       {isRoute(routes.home) && <div>Welcome home</div>}
       {isRoute(routes.about) && <div>About us</div>}
       {isRoute(routes.gallery) && <Gallery />}
+      {isRoute(routes.gallery2) && <Gallery2 />}
+      {}
     </div>
   );
 };

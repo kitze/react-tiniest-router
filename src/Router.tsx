@@ -31,8 +31,8 @@ export const Router: React.FC<{ routes: RoutesType }> = ({
       mapObject(routes, route => {
         return {
           key: route.path,
-          value: params => {
-            goTo(route, params);
+          value: (params, queryParams) => {
+            goTo(route, params, queryParams);
           },
         };
       })
