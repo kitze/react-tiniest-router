@@ -37,7 +37,7 @@
     "react-dom": "^16.8.6",
     "tsdx": "^0.7.1",
     "tslib": "^1.10.0",
-    "typescript": "^3.5.2"
+    "typescript": "^3.9.10"
   },
   "dependencies": {
     "path-match": "^1.2.4",
